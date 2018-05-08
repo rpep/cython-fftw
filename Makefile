@@ -20,3 +20,8 @@ clean:
 	rm -rf build
 	rm -rf include/fftw3.h
 	rm -rf include/fftw3.f
+	rm -rf __pycache__
+	rm -rf .pytest_cache
+	rm -rf .hypothesis
+test:
+	pytest test_fft.py
