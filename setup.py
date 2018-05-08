@@ -2,7 +2,7 @@ from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
 from Cython.Build import cythonize
-
+import numpy
 # If you have the Intel MKL installed,
 # you can use the Intel Link Line advisor
 # and replace the fftw3 library with MKL
@@ -12,7 +12,7 @@ from Cython.Build import cythonize
 libs = ['m', 'fftw3']
 args = ['-std=c99', '-O3']
 sources = ['src/fftlib.pyx', 'src/fft_stuff.c']
-include = ['include']
+include = ['include',numpy.get_include()]
 linkerargs = ['-Wl,-rpath,$(PWD)/lib']
 
 
