@@ -13,7 +13,8 @@ libs = ['m', 'fftw3']
 args = ['-std=c99', '-O3']
 sources = ['src/fftlib.pyx', 'src/fft_stuff.c']
 include = ['include',numpy.get_include()]
-linkerargs = ['-Wl,-rpath,$(PWD)/lib']
+linkerargs = ['-Wl,-rpath,lib']
+libdirs = ['lib']
 
 
 extensions = [
@@ -21,6 +22,7 @@ extensions = [
               sources=sources,
               include_dirs=include,
               libraries=libs,
+              library_dirs=libdirs,
               extra_compile_args=args,
               extra_link_args=linkerargs)
 ]
