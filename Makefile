@@ -1,7 +1,7 @@
 FFTW_VERSION=3.3.7
 FFTW_FOLDER=fftw-$(FFTW_VERSION)
 
-all: fftw
+all:
 	python setup.py build_ext --inplace
 
 fftw:
@@ -11,8 +11,9 @@ fftw:
 	cd $(FFTW_FOLDER) \
         && cmake . -DCMAKE_INSTALL_PREFIX=$(PWD) \
            -DENABLE_AVX2=YES -DENABLE_AVX=YES -DENABLE_SSE2=YES -DENABLE_SSE=YES \
-        && make install
+        && make -j2 install
 	#rm -rf fftw-$(FFTW_VERSION)
+
 clean:
 	rm -rf lib
 	rm -rf src/fftlib.c
