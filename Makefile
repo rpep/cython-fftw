@@ -1,7 +1,7 @@
 FFTW_VERSION=3.3.7
 FFTW_FOLDER=fftw-$(FFTW_VERSION)
 
-all:
+all: fftw
 	python setup.py build_ext --inplace
 
 fftw:
