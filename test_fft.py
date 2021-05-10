@@ -1,6 +1,5 @@
 from fftlib import FFTObject
 import numpy as np
-import matplotlib.pyplot as plt
 
 def test_fft():
 	n = 100

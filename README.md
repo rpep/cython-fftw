@@ -1,4 +1,4 @@
-# Cython-FFTW
+# Wrapping FFTW methods with Cython
 
 This repository just shows how simple it is to wrap up C functions with Cython so that they can be used in Python.
 
@@ -7,9 +7,15 @@ Cython; it's to show that if you already have everything set up in C functions, 
 
 To build this:
 
-> make
+```bash
+virtualenv env
+source env/bin/activate
+pip install -r requirements.txt
+make
+```
 
 To test:
 
-> py.test -v
-
+```bash
+make test
+```
