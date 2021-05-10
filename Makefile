@@ -1,8 +1,9 @@
 FFTW_VERSION=3.3.7
 FFTW_FOLDER=fftw-$(FFTW_VERSION)
+PYTHON=python
 
 all: fftw
-	python setup.py build_ext --inplace
+	$(PYTHON) setup.py build_ext --inplace
 
 fftw:
 	wget http://fftw.org/fftw-$(FFTW_VERSION).tar.gz
@@ -24,5 +25,6 @@ clean:
 	rm -rf __pycache__
 	rm -rf .pytest_cache
 	rm -rf .hypothesis
+
 test:
 	pytest test_fft.py
