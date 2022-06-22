@@ -1,9 +1,9 @@
 Cython==0.29.23
-numpy==1.20.2
+numpy==1.22.0
 attrs==21.2.0
 Cython==0.29.23
 iniconfig==1.1.1
-numpy==1.20.2
+numpy==1.22.0
 packaging==20.9
 pluggy==0.13.1
 py==1.10.0
